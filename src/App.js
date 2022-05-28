@@ -1,10 +1,10 @@
-import './App.css';
+
+import Views from './components/Views';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>iNotebook App</h1>
-    </div>
+    <Views/> 
   );
 }
 
