@@ -32,9 +32,13 @@ const Notes = ({showAlert}) => {
   }
   const handleClick =(e)=>{
     e.preventDefault()
-    editNote(note.id,note.etitle,note.edescription,note.etag)
+    const res = editNote(note.id,note.etitle,note.edescription,note.etag)
     refclose.current.click()
-    showAlert('Note has been updated','success')      
+    if(res.success){
+      showAlert('Note has been updated','success')      
+    }else{
+    showAlert(res.msg,'warning')      
+    }
   }
   const onChange=(e)=>{
     setNote({...note,[e.target.name]:e.target.value});

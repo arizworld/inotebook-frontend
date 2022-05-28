@@ -86,7 +86,7 @@ const NoteState = (props) => {
         body: JSON.stringify({ title, description, tag })
       });
       const res = await response.json()
-      console.log(res)
+      console.log(res);
       // Logic to edit client side
       const newNotes = notes.map((note) => {
         if (note._id === id) {
@@ -94,12 +94,13 @@ const NoteState = (props) => {
           note.description = description
           note.tag = tag
         }
-        return note
+        return({note,success: true})
       })
       setNotes(newNotes)
 
     } catch (error) {
       console.log(error.message);
+      return({success: false,msg: error.message})
     }
   }
   // Delete a Note

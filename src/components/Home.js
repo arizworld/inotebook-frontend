@@ -7,7 +7,7 @@ function Home() {
         <div className="description">
           <h1>Your online notebook</h1>
           <p>To keep track of your notes!! keep your notes safe,secure and access from anywhere.</p>
-          <Link to="/">Get Started</Link>
+          <Link to="/signup">Get Started</Link>
         </div>
         <div className="illustration">
           <img className="image" src={notes} alt="notes illustration" />

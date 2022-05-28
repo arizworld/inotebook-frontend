@@ -5,12 +5,12 @@ const Footer = () => {
       {/* <!-- social media --> */}
       <ul className="social-icons">
           <li>
-            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
+            <a href="https://www.facebook.com/aritra.sadhukhan.50/" target='_b' rel="noreferrer">
               <i className="fab fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
+            <a href="https://www.linkedin.com/in/aritra-sadhukhan/" target='_b' rel="noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
