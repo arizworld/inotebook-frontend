@@ -1,35 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import useWindowSize from '../customHooks/windowSize'
 const Footer = () => {
   return (
     <div className='footer'>        
       {/* <!-- social media --> */}
       <ul className="social-icons">
           <li>
-            <Link to="https://www.twitter.com">
+            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
               <i className="fab fa-facebook"></i>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://www.twitter.com">
+            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
               <i className="fab fa-twitter"></i>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://www.twitter.com">
+            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
               <i className="fab fa-behance"></i>
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://www.twitter.com">
-              <i className="fab fa-linkedin"></i>
-            </Link>
+            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
+              <i className="fab fa-aedin"></i>
+            </a>
           </li>
           <li>
-            <Link to="https://www.twitter.com">
+            <a href="https://www.twitter.com" target='_b' rel="noreferrer">
               <i className="fab fa-sketch"></i>
-            </Link>
+            </a>
           </li>
         </ul>
     </div>

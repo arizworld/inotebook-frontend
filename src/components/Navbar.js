@@ -1,20 +1,23 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useContext } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-
+import NoteContext from '../context/NoteContext';
 
 function Navbar() {
   let location = useLocation();
+  const {setIslogin} = useContext(NoteContext);
   useEffect(() => {
-
   }, [location])
   let navigate = useNavigate()
   const handleLogout = ()=>{
-    localStorage.removeItem('token')
+    localStorage.removeItem('token');
+    setIslogin(false);
     navigate('/login')
   }
   const handleDropdown = () => {
     const links = document.querySelector('.links')
+    const linksB = document.querySelector('.links.b')
     links.classList.toggle('show-links')
+    linksB.classList.toggle('show-links')
   }
   return (
     <>
@@ -42,7 +45,7 @@ function Navbar() {
             </li>
             </ul>
             {!localStorage.getItem('token') &&
-              <ul className='links'>
+              <ul className='links b'>
                 <li>
                   <Link to="/login" className={location.pathname === '/login' ? "active-link" : ""}>
                     <button className='btn btn-primary'>Login</button>
@@ -56,7 +59,7 @@ function Navbar() {
               </ul>
             }
             {localStorage.getItem('token') &&
-            <ul className="links">
+            <ul className="links b">
               <li>
                 <Link to='/login'>
                   <button className="btn btn-primary"onClick={handleLogout}>Log out</button>

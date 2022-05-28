@@ -1,6 +1,8 @@
-import React, { useState} from 'react'
+import React, { useState,useContext} from 'react'
 import { useNavigate } from "react-router-dom"
+import NoteContext from '../context/NoteContext'
 const Login = ({showAlert}) => {
+  const {setIslogin} = useContext(NoteContext);
     const host = "https://i-note-book-app.herokuapp.com"
     let navigate = useNavigate()
     const [credentials,setCredentials] = useState({email : "", password : ""})
@@ -21,6 +23,7 @@ const Login = ({showAlert}) => {
         if(res.success){
           showAlert('Logged in successfully','success')
           localStorage.setItem("token", res.token)
+          setIslogin(true);
           navigate('/notes');
         }else{
           let error = res.error;

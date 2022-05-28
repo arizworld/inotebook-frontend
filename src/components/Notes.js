@@ -72,7 +72,7 @@ const Notes = ({showAlert}) => {
       </div>
       <div className="notes-container">
         {/* notes */}
-        {notes.length === 0 && 'No Notes Available...'}
+        {notes.length === 0 && <div className='notes no-notes'>No Notes available</div>}
         {notes.map((note) => {
           return (
             <NoteItems key={note._id} updateNote={updateNote} note={note} showAlert={showAlert} ></NoteItems>
