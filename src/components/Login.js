@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import NoteContext from '../context/NoteContext'
 const Login = ({showAlert}) => {
   const {setIslogin} = useContext(NoteContext);
-    const host = "https://i-note-book-app.herokuapp.com"
+    const host = "https://energetic-ray-tunic.cyclic.app"
     let navigate = useNavigate()
     const [credentials,setCredentials] = useState({email : "", password : ""})
     const onChange = (e)=>{
