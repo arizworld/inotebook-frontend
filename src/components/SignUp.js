@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
   
 const SignUp = ({showAlert}) => {
-  const host = "https://i-note-book-app.herokuapp.com"
+  const host = "https://energetic-ray-tunic.cyclic.app"
   const navigate = useNavigate();
   const [credentials,setCredentials] = useState({
     name : '',
