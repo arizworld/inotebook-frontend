@@ -2,7 +2,7 @@ import { useState } from "react";
 import NoteContext from "./NoteContext";
 
 const NoteState = (props) => {
-  const host = "https://i-note-book-app.herokuapp.com"
+  const host = "https://energetic-ray-tunic.cyclic.app"
   const notesInitial = []
   const [notes, setNotes] = useState(notesInitial)
   const [isLogin,setIslogin]= useState(false);
